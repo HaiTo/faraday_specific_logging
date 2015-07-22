@@ -1,4 +1,4 @@
-autoload 'faraday/specific_loging'
+require 'faraday/specific_loging'
 
 if Faraday.respond_to?(:register_middleware)
   Faraday.register_middleware specific_loging: Faraday::SpecificLogging

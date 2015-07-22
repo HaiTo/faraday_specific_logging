@@ -1,6 +1,5 @@
 require 'faraday'
 require 'faraday_middleware'
-require 'specific_logging/version'
 
 module Faraday
   class SpecificLogging < Faraday::Middleware

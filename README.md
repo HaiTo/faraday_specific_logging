@@ -3,7 +3,11 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'specific_logging'
+gem 'faraday_specific_logging'
+
+# or
+
+gem install faraday_specific_logging
 ```
 
 And then execute:

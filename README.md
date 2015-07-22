@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ```rb
 @conn = Faraday.new(url: 'example.com') do |builder|
-  builder.use Faraday::SpecificLogging, {logger: Rails.logger, target_key: 'hoge'}
+  builder.specific_logging, {logger: Rails.logger, target_key: 'hoge'}
   builder.request :json
   builder.adapter :net_http
 end

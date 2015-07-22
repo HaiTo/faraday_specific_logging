@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'specific_logging/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'specific_logging'
-  spec.version       = SpecificLogging::VERSION
+  spec.name          = 'faraday_specific_logging'
+  spec.version       = '0.1.0'
   spec.authors       = ['HaiTo']
   spec.email         = ['']
 

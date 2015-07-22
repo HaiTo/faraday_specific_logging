@@ -1,0 +1,116 @@
+AllCops:
+  Exclude:
+    - .rbenv/**
+    - vendor/**
+    - db/**
+    - config/**
+    - tmp/**
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/ClassLength:
+  Max: 250
+
+Metrics/CyclomaticComplexity:
+  Max: 20
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: true
+
+Lint/UnusedMethodArgument:
+  Enabled: true
+
+Lint/UselessAssignment:
+  Enabled: true
+
+Lint/UselessComparison:
+  Enabled: true
+
+Lint/Void:
+  Enabled: true
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Style/SpaceBeforeBlockBraces:
+  EnforcedStyle: space
+
+Style/SpaceInsideBlockBraces:
+  EnforcedStyle: space
+  SpaceBeforeBlockParameters: false
+
+Style/BracesAroundHashParameters:
+  EnforcedStyle: no_braces
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/IfUnlessModifier:
+  MaxLineLength: 60
+
+Style/GuardClause:
+  MinBodyLength: 3
+
+RedundantSelf:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Lint/EndAlignment:
+  Enabled: false
+
+Style/IndentationWidth:
+  Enabled: false
+
+AndOr:
+  Enabled: false
+
+Style/IndentHash:
+  Enabled: false
+
+Style/CaseEquality:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+NumericLiterals:
+  MinDigits: 12
+
+CommentAnnotation:
+  Enabled: false
+
+Style/BlockDelimiters:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/TrailingUnderscoreVariable:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+Style/WhenThen:
+   Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false

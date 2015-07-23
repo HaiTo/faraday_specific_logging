@@ -3,7 +3,8 @@ require 'spec_helper'
 describe Faraday::SpecificLogging do
   let(:options) { {logger: logger, target_key: target_key} }
   let(:middleware) { described_class.new(lambda {|env| env }, options) }
-  let(:rails_logger) { Rails.logger }
+  let(:tmp_file) { Tempfile.new('tmp.log') }
+  let(:logger) { Logger.new(tmp_file) }
 
   def process(body, method = :post)
     env = {body: body, request_headers: Faraday::Utils::Headers.new}
@@ -12,7 +13,7 @@ describe Faraday::SpecificLogging do
   end
 
   before do
-    allow(middleware).to receive(:@logger).and_return(rails_logger)
+    allow(middleware).to receive(:@logger).and_return(logger)
   end
 
   context 'when missing options' do
@@ -21,18 +22,17 @@ describe Faraday::SpecificLogging do
       let(:target_key) { 'id' }
 
       specify do
-        expect(rails_logger).not_to receive(:send)
+        expect(logger).not_to receive(:send)
 
         process('id=2')
       end
     end
 
     context 'missing target_key' do
-      let(:logger) { Rails.logger }
       let(:target_key) { nil }
 
       specify do
-        expect(rails_logger).not_to receive(:send)
+        expect(logger).not_to receive(:send)
 
         process('id=2')
       end
@@ -40,11 +40,10 @@ describe Faraday::SpecificLogging do
   end
 
   context 'when correct case' do
-    let(:logger) { Rails.logger }
     let(:target_key) { :id }
 
     specify do
-      expect(rails_logger).to receive(:send)
+      expect(logger).to receive(:send)
 
       process('id=2')
     end

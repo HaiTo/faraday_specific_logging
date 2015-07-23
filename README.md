@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/HaiTo/faraday_specific_logging.svg?style=svg)](https://circleci.com/gh/HaiTo/faraday_specific_logging)
+
 ## Installation
 
 Add this line to your application's Gemfile:

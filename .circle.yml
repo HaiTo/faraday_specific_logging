@@ -1,0 +1,9 @@
+machine:
+  ruby:
+    version:
+      2.2.0
+
+dependencies:
+  pre:
+    - gem uninstall bundler
+    - gem install bundler --pre

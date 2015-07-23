@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SpecificLogging do
+describe Faraday::SpecificLogging do
   it 'has a version number' do
     expect(SpecificLogging::VERSION).not_to be nil
   end

@@ -30,7 +30,7 @@ module Faraday
     end
 
     def not_post_or_put?(env)
-      %i(post put).exclude?(env[:method])
+      [:put, :post].exclude?(env[:method])
     end
 
     def parse_body(env)

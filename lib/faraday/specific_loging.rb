@@ -3,6 +3,8 @@ require 'faraday_middleware'
 
 module Faraday
   class SpecificLogging < Faraday::Middleware
+    VERSION = '0.1.1'
+
     def initialize(app, options = {})
       super(app)
       @logger = options[:logger]
